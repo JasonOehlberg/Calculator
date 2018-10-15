@@ -78,6 +78,7 @@
             this.lblUnitTypeSmall = new System.Windows.Forms.Label();
             this.lblDataSmall = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -174,9 +175,9 @@
             this.btnClear.AutoSize = true;
             this.btnClear.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnClear.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(8, 166);
+            this.btnClear.Location = new System.Drawing.Point(301, 455);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(90, 65);
+            this.btnClear.Size = new System.Drawing.Size(141, 65);
             this.btnClear.TabIndex = 76;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -450,14 +451,14 @@
             // 
             this.btnDecimal.AutoSize = true;
             this.btnDecimal.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDecimal.Font = new System.Drawing.Font("Arial Unicode MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecimal.Font = new System.Drawing.Font("Arial Unicode MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDecimal.Location = new System.Drawing.Point(204, 455);
             this.btnDecimal.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecimal.Name = "btnDecimal";
             this.btnDecimal.Size = new System.Drawing.Size(90, 65);
             this.btnDecimal.TabIndex = 83;
-            this.btnDecimal.Text = "•";
+            this.btnDecimal.Text = ".";
             this.btnDecimal.UseVisualStyleBackColor = false;
             this.btnDecimal.Click += new System.EventHandler(this.btnDecimal_Click);
             // 
@@ -466,9 +467,9 @@
             this.cbUnitType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUnitType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUnitType.FormattingEnabled = true;
-            this.cbUnitType.Location = new System.Drawing.Point(106, 171);
+            this.cbUnitType.Location = new System.Drawing.Point(8, 171);
             this.cbUnitType.Name = "cbUnitType";
-            this.cbUnitType.Size = new System.Drawing.Size(188, 33);
+            this.cbUnitType.Size = new System.Drawing.Size(286, 33);
             this.cbUnitType.TabIndex = 84;
             // 
             // lblInput
@@ -516,6 +517,7 @@
             this.radVolume.TabStop = true;
             this.radVolume.Text = "Volume";
             this.radVolume.UseVisualStyleBackColor = true;
+            this.radVolume.CheckedChanged += new System.EventHandler(this.RadioMeasure_CheckedChanged);
             // 
             // radWeight
             // 
@@ -529,6 +531,7 @@
             this.radWeight.TabStop = true;
             this.radWeight.Text = "Weight";
             this.radWeight.UseVisualStyleBackColor = true;
+            this.radWeight.CheckedChanged += new System.EventHandler(this.RadioMeasure_CheckedChanged);
             // 
             // radDistance
             // 
@@ -542,6 +545,7 @@
             this.radDistance.TabStop = true;
             this.radDistance.Text = "Distance";
             this.radDistance.UseVisualStyleBackColor = true;
+            this.radDistance.CheckedChanged += new System.EventHandler(this.RadioMeasure_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -657,11 +661,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert To";
             // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(448, 456);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(209, 65);
+            this.button1.TabIndex = 94;
+            this.button1.Text = "Calculate";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // MeasurementConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 528);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.radDistance);
@@ -748,5 +765,6 @@
         private System.Windows.Forms.Label lblOptionalData;
         private System.Windows.Forms.Label lblOptionalDataType;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

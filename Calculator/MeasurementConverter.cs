@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -19,7 +11,9 @@ namespace Calculator
             InitializeComponent();
             mc = new MeasurementCalc();
             mc.DecimalPressed = false;
-           
+            addButtonListeners(getNumberButtons());
+            addRadMeasureTypeListeners(getMeasurementRadBtn());
+            addRadConvertListeners(getConvertToRadBtn());
         }
 
         private void MeasurementConverter_Load(object sender, EventArgs e)
@@ -55,7 +49,7 @@ namespace Calculator
                 r.CheckedChanged += RadioConvert_CheckedChanged;
         }
 
-        private void addRadMeasurTypeListeners(RadioButton[] rads)
+        private void addRadMeasureTypeListeners(RadioButton[] rads)
         {
             foreach (RadioButton r in rads)
                 r.CheckedChanged += RadioMeasure_CheckedChanged;
@@ -79,7 +73,7 @@ namespace Calculator
             }
             else
             {
-                
+
                 lblInput.Text += ((Button)sender).Text;
             }
 
@@ -105,7 +99,6 @@ namespace Calculator
                     lblInput.Text = "0";
                 }
             }
-
         }
 
         private void btnDecimal_Click(object sender, EventArgs e)
@@ -127,31 +120,85 @@ namespace Calculator
 
         private void RadioConvert_CheckedChanged(Object sender, EventArgs e)
         {
-            if (((RadioButton)sender).Text.Equals("Metric"))
+            if (((RadioButton)sender).Text.Equals("US Standard"))
             {
-                Debug.WriteLine("Im in Metric");
                 if (radDistance.Checked)
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.metricDistance)
+                    foreach (string item in mc.metric["Distance"])
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
                 else if (radVolume.Checked)
                 {
-                    
+                    cbUnitType.Items.Clear();
+
+                    foreach (string item in mc.metric["Volume"])
+                        cbUnitType.Items.Add(item);
+                    cbUnitType.SelectedIndex = 0;
                 }
                 else if (radWeight.Checked)
                 {
+                    cbUnitType.Items.Clear();
 
+                    foreach (string item in mc.metric["Weight"])
+                        cbUnitType.Items.Add(item);
+                    cbUnitType.SelectedIndex = 0;
+                }
+            }
+            else if(((RadioButton)sender).Text.Equals("Metric")){
+                if (radDistance.Checked)
+                {
+                    cbUnitType.Items.Clear();
+
+                    foreach (string item in mc.us["Distance"])
+                        cbUnitType.Items.Add(item);
+                    cbUnitType.SelectedIndex = 0;
+                }
+                else if (radVolume.Checked)
+                {
+                    cbUnitType.Items.Clear();
+
+                    foreach (string item in mc.us["Volume"])
+                        cbUnitType.Items.Add(item);
+                    cbUnitType.SelectedIndex = 0;
+                }
+                else if (radWeight.Checked)
+                {
+                    cbUnitType.Items.Clear();
+
+                    foreach (string item in mc.us["Weight"])
+                        cbUnitType.Items.Add(item);
+                    cbUnitType.SelectedIndex = 0;
                 }
             }
         }
 
         private void RadioMeasure_CheckedChanged(Object sender, EventArgs e)
         {
+            
+            cbUnitType.Items.Clear();
+            string id = ((RadioButton)sender).Text;
+            if (radMetric.Checked)
+            {
 
+                foreach (string item in mc.us[id])
+                {
+                    cbUnitType.Items.Add(item);
+                }
+                cbUnitType.SelectedIndex = 0;
+
+            }
+            if (radUS.Checked)
+            {
+               
+                foreach (string item in mc.metric[id])
+                {
+                    cbUnitType.Items.Add(item);
+                }
+                cbUnitType.SelectedIndex = 0;
+            }
         }
 
     }
