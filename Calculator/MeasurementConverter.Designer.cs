@@ -79,9 +79,11 @@
             this.lblDataSmall = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -496,7 +498,7 @@
             // radUS
             // 
             this.radUS.AutoSize = true;
-            this.radUS.Location = new System.Drawing.Point(179, 30);
+            this.radUS.Location = new System.Drawing.Point(156, 30);
             this.radUS.Name = "radUS";
             this.radUS.Size = new System.Drawing.Size(110, 21);
             this.radUS.TabIndex = 87;
@@ -510,7 +512,7 @@
             this.radVolume.Appearance = System.Windows.Forms.Appearance.Button;
             this.radVolume.AutoSize = true;
             this.radVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radVolume.Location = new System.Drawing.Point(350, 166);
+            this.radVolume.Location = new System.Drawing.Point(16, 21);
             this.radVolume.Name = "radVolume";
             this.radVolume.Size = new System.Drawing.Size(86, 34);
             this.radVolume.TabIndex = 89;
@@ -524,7 +526,7 @@
             this.radWeight.Appearance = System.Windows.Forms.Appearance.Button;
             this.radWeight.AutoSize = true;
             this.radWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radWeight.Location = new System.Drawing.Point(447, 166);
+            this.radWeight.Location = new System.Drawing.Point(108, 21);
             this.radWeight.Name = "radWeight";
             this.radWeight.Size = new System.Drawing.Size(79, 34);
             this.radWeight.TabIndex = 90;
@@ -538,7 +540,7 @@
             this.radDistance.Appearance = System.Windows.Forms.Appearance.Button;
             this.radDistance.AutoSize = true;
             this.radDistance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radDistance.Location = new System.Drawing.Point(532, 166);
+            this.radDistance.Location = new System.Drawing.Point(193, 21);
             this.radDistance.Name = "radDistance";
             this.radDistance.Size = new System.Drawing.Size(92, 34);
             this.radDistance.TabIndex = 91;
@@ -560,23 +562,23 @@
             this.tableLayoutPanel1.Controls.Add(this.lblDataMiddle, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblUnitTypeSmall, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblDataSmall, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(350, 237);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(301, 210);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(269, 211);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(356, 238);
             this.tableLayoutPanel1.TabIndex = 92;
             // 
             // lblOptionalData
             // 
             this.lblOptionalData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblOptionalData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionalData.Location = new System.Drawing.Point(3, 156);
+            this.lblOptionalData.Location = new System.Drawing.Point(3, 177);
             this.lblOptionalData.Name = "lblOptionalData";
-            this.lblOptionalData.Size = new System.Drawing.Size(168, 55);
+            this.lblOptionalData.Size = new System.Drawing.Size(225, 61);
             this.lblOptionalData.TabIndex = 7;
             this.lblOptionalData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -584,9 +586,9 @@
             // 
             this.lblOptionalDataType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblOptionalDataType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOptionalDataType.Location = new System.Drawing.Point(177, 156);
+            this.lblOptionalDataType.Location = new System.Drawing.Point(234, 177);
             this.lblOptionalDataType.Name = "lblOptionalDataType";
-            this.lblOptionalDataType.Size = new System.Drawing.Size(89, 55);
+            this.lblOptionalDataType.Size = new System.Drawing.Size(119, 61);
             this.lblOptionalDataType.TabIndex = 6;
             this.lblOptionalDataType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -594,9 +596,9 @@
             // 
             this.lblUnitTypeLarge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUnitTypeLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitTypeLarge.Location = new System.Drawing.Point(177, 104);
+            this.lblUnitTypeLarge.Location = new System.Drawing.Point(234, 118);
             this.lblUnitTypeLarge.Name = "lblUnitTypeLarge";
-            this.lblUnitTypeLarge.Size = new System.Drawing.Size(89, 52);
+            this.lblUnitTypeLarge.Size = new System.Drawing.Size(119, 59);
             this.lblUnitTypeLarge.TabIndex = 5;
             this.lblUnitTypeLarge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -604,9 +606,9 @@
             // 
             this.lblDataLarge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDataLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataLarge.Location = new System.Drawing.Point(3, 104);
+            this.lblDataLarge.Location = new System.Drawing.Point(3, 118);
             this.lblDataLarge.Name = "lblDataLarge";
-            this.lblDataLarge.Size = new System.Drawing.Size(168, 52);
+            this.lblDataLarge.Size = new System.Drawing.Size(225, 59);
             this.lblDataLarge.TabIndex = 4;
             this.lblDataLarge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -614,9 +616,9 @@
             // 
             this.lblUnitTypeMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUnitTypeMiddle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitTypeMiddle.Location = new System.Drawing.Point(177, 52);
+            this.lblUnitTypeMiddle.Location = new System.Drawing.Point(234, 59);
             this.lblUnitTypeMiddle.Name = "lblUnitTypeMiddle";
-            this.lblUnitTypeMiddle.Size = new System.Drawing.Size(89, 52);
+            this.lblUnitTypeMiddle.Size = new System.Drawing.Size(119, 59);
             this.lblUnitTypeMiddle.TabIndex = 3;
             this.lblUnitTypeMiddle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -624,9 +626,9 @@
             // 
             this.lblDataMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDataMiddle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataMiddle.Location = new System.Drawing.Point(3, 52);
+            this.lblDataMiddle.Location = new System.Drawing.Point(3, 59);
             this.lblDataMiddle.Name = "lblDataMiddle";
-            this.lblDataMiddle.Size = new System.Drawing.Size(168, 52);
+            this.lblDataMiddle.Size = new System.Drawing.Size(225, 59);
             this.lblDataMiddle.TabIndex = 2;
             this.lblDataMiddle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -634,9 +636,9 @@
             // 
             this.lblUnitTypeSmall.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUnitTypeSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitTypeSmall.Location = new System.Drawing.Point(177, 0);
+            this.lblUnitTypeSmall.Location = new System.Drawing.Point(234, 0);
             this.lblUnitTypeSmall.Name = "lblUnitTypeSmall";
-            this.lblUnitTypeSmall.Size = new System.Drawing.Size(89, 52);
+            this.lblUnitTypeSmall.Size = new System.Drawing.Size(119, 59);
             this.lblUnitTypeSmall.TabIndex = 1;
             this.lblUnitTypeSmall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -646,7 +648,7 @@
             this.lblDataSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataSmall.Location = new System.Drawing.Point(3, 0);
             this.lblDataSmall.Name = "lblDataSmall";
-            this.lblDataSmall.Size = new System.Drawing.Size(168, 52);
+            this.lblDataSmall.Size = new System.Drawing.Size(225, 59);
             this.lblDataSmall.TabIndex = 0;
             this.lblDataSmall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -654,9 +656,9 @@
             // 
             this.groupBox1.Controls.Add(this.radMetric);
             this.groupBox1.Controls.Add(this.radUS);
-            this.groupBox1.Location = new System.Drawing.Point(323, 31);
+            this.groupBox1.Location = new System.Drawing.Point(334, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(295, 69);
+            this.groupBox1.Size = new System.Drawing.Size(301, 69);
             this.groupBox1.TabIndex = 93;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert To";
@@ -673,17 +675,27 @@
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radWeight);
+            this.groupBox2.Controls.Add(this.radVolume);
+            this.groupBox2.Controls.Add(this.radDistance);
+            this.groupBox2.Location = new System.Drawing.Point(334, 127);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(301, 77);
+            this.groupBox2.TabIndex = 95;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // MeasurementConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 528);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.radDistance);
-            this.Controls.Add(this.radWeight);
-            this.Controls.Add(this.radVolume);
             this.Controls.Add(this.lblInput);
             this.Controls.Add(this.cbUnitType);
             this.Controls.Add(this.btnDecimal);
@@ -708,6 +720,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -766,5 +780,6 @@
         private System.Windows.Forms.Label lblOptionalDataType;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
