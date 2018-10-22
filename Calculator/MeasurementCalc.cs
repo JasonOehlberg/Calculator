@@ -11,14 +11,17 @@ namespace Calculator
     {
         public bool DecimalPressed { get; set; }
 
-        public string[] metricVolume = { "milliliter", "liter", "cubic meter" };
-        public string[] metricWeight = { "milligram", "gram", "kilogram" };
-        public string[] metricDistance = { "millimeter", "centimeter", "meter", "kilometer" };
-        public string[] usVolume = { "fluid oz", "pint", "gallon" };
-        public string[] usWeight = { "ounce", "pound" };
-        public string[] usDistance = { "inch", "foot", "yard", "mile" };
-        public Dictionary<string, string[]> us;
-        public Dictionary<string, string[]> metric;
+        private string[] metricVolume = { "milliliter", "liter", "cubic meter" };
+        private string[] metricWeight = { "milligram", "gram", "kilogram" };
+        private string[] metricDistance = { "millimeter", "centimeter", "meter", "kilometer" };
+        private string[] usVolume = { "fluid oz", "pint", "gallon" };
+        private string[] usWeight = { "ounce", "pound" };
+        private string[] usDistance = { "inch", "foot", "yard", "mile" };
+
+        private readonly Dictionary<string, string[]> us;
+        private readonly Dictionary<string, string[]> metric;
+        private readonly Dictionary<string, double[]> usConversion;
+        private readonly Dictionary<string, double[]> metricConverion;
 
         public MeasurementCalc()
         {
@@ -35,6 +38,23 @@ namespace Calculator
                 { "Distance", metricDistance }
 
             };
+        }
+
+        public string[] getUSList(string id)
+        {
+            return us[id];
+        }
+
+        public string[] getMetricList(string id)
+        {
+            return metric[id];
+        }
+
+        public string convertFromMilli(string s)
+        {
+            UInt64 temp = Convert.ToUInt64(s);
+
+            return "";
         }
 
     }

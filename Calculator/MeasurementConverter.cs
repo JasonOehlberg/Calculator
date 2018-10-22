@@ -126,7 +126,7 @@ namespace Calculator
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.metric["Distance"])
+                    foreach (string item in mc.getMetricList("Distance"))
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
@@ -134,7 +134,7 @@ namespace Calculator
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.metric["Volume"])
+                    foreach (string item in mc.getMetricList("Volume"))
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
@@ -142,7 +142,7 @@ namespace Calculator
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.metric["Weight"])
+                    foreach (string item in mc.getMetricList("Weight"))
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
@@ -152,7 +152,7 @@ namespace Calculator
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.us["Distance"])
+                    foreach (string item in mc.getUSList("Distance"))
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
@@ -160,7 +160,7 @@ namespace Calculator
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.us["Volume"])
+                    foreach (string item in mc.getUSList("Volume"))
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
@@ -168,7 +168,7 @@ namespace Calculator
                 {
                     cbUnitType.Items.Clear();
 
-                    foreach (string item in mc.us["Weight"])
+                    foreach (string item in mc.getUSList("Weight"))
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
@@ -183,7 +183,7 @@ namespace Calculator
             if (radMetric.Checked)
             {
 
-                foreach (string item in mc.us[id])
+                foreach (string item in mc.getUSList(id))
                 {
                     cbUnitType.Items.Add(item);
                 }
@@ -193,7 +193,7 @@ namespace Calculator
             if (radUS.Checked)
             {
                
-                foreach (string item in mc.metric[id])
+                foreach (string item in mc.getUSList(id))
                 {
                     cbUnitType.Items.Add(item);
                 }
