@@ -39,12 +39,6 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnPlus = new System.Windows.Forms.Button();
-            this.btnSubtract = new System.Windows.Forms.Button();
-            this.btnMultiply = new System.Windows.Forms.Button();
-            this.btnDivide = new System.Windows.Forms.Button();
             this.btnBackSpace = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnF = new System.Windows.Forms.Button();
@@ -63,13 +57,10 @@
             this.lblOCT = new System.Windows.Forms.Label();
             this.lblBIN = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuItemCalculator = new System.Windows.Forms.ToolStripMenuItem();
-            this.regularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programmerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.measurementConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uSCustomaryUnitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Calculator = new System.Windows.Forms.ToolStripMenuItem();
+            this.Measurement = new System.Windows.Forms.ToolStripMenuItem();
+            this.Time = new System.Windows.Forms.ToolStripMenuItem();
+            this.Programmer = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +70,7 @@
             this.btn1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn1.Location = new System.Drawing.Point(384, 418);
+            this.btn1.Location = new System.Drawing.Point(182, 413);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(80, 57);
             this.btn1.TabIndex = 6;
@@ -91,7 +82,7 @@
             // 
             this.btn2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(470, 418);
+            this.btn2.Location = new System.Drawing.Point(268, 413);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(80, 57);
             this.btn2.TabIndex = 7;
@@ -102,7 +93,7 @@
             // 
             this.btn3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(556, 418);
+            this.btn3.Location = new System.Drawing.Point(354, 413);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(80, 57);
             this.btn3.TabIndex = 8;
@@ -113,7 +104,7 @@
             // 
             this.btn4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(384, 355);
+            this.btn4.Location = new System.Drawing.Point(182, 350);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(80, 57);
             this.btn4.TabIndex = 9;
@@ -124,7 +115,7 @@
             // 
             this.btn5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(470, 355);
+            this.btn5.Location = new System.Drawing.Point(268, 350);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(80, 57);
             this.btn5.TabIndex = 10;
@@ -135,7 +126,7 @@
             // 
             this.btn6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(556, 355);
+            this.btn6.Location = new System.Drawing.Point(354, 350);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(80, 57);
             this.btn6.TabIndex = 11;
@@ -146,7 +137,7 @@
             // 
             this.btn7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(384, 292);
+            this.btn7.Location = new System.Drawing.Point(182, 287);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 57);
             this.btn7.TabIndex = 12;
@@ -157,7 +148,7 @@
             // 
             this.btn8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(470, 292);
+            this.btn8.Location = new System.Drawing.Point(268, 287);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(80, 57);
             this.btn8.TabIndex = 13;
@@ -168,7 +159,7 @@
             // 
             this.btn9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(556, 292);
+            this.btn9.Location = new System.Drawing.Point(354, 287);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(80, 57);
             this.btn9.TabIndex = 14;
@@ -179,7 +170,7 @@
             // 
             this.btn0.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(470, 481);
+            this.btn0.Location = new System.Drawing.Point(268, 476);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(80, 57);
             this.btn0.TabIndex = 5;
@@ -189,12 +180,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.btnPlus);
-            this.panel1.Controls.Add(this.btnSubtract);
-            this.panel1.Controls.Add(this.btnMultiply);
-            this.panel1.Controls.Add(this.btnDivide);
             this.panel1.Controls.Add(this.btnBackSpace);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnF);
@@ -218,78 +203,12 @@
             this.panel1.Size = new System.Drawing.Size(724, 546);
             this.panel1.TabIndex = 10;
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.Enabled = false;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(3, 225);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(370, 308);
-            this.listBox1.TabIndex = 30;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(556, 481);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 57);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "=";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.Location = new System.Drawing.Point(642, 292);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(80, 57);
-            this.btnPlus.TabIndex = 28;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = false;
-            // 
-            // btnSubtract
-            // 
-            this.btnSubtract.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubtract.Location = new System.Drawing.Point(642, 355);
-            this.btnSubtract.Name = "btnSubtract";
-            this.btnSubtract.Size = new System.Drawing.Size(80, 57);
-            this.btnSubtract.TabIndex = 27;
-            this.btnSubtract.Text = "-";
-            this.btnSubtract.UseVisualStyleBackColor = false;
-            // 
-            // btnMultiply
-            // 
-            this.btnMultiply.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiply.Location = new System.Drawing.Point(642, 418);
-            this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(80, 57);
-            this.btnMultiply.TabIndex = 26;
-            this.btnMultiply.Text = "x";
-            this.btnMultiply.UseVisualStyleBackColor = false;
-            // 
-            // btnDivide
-            // 
-            this.btnDivide.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivide.Location = new System.Drawing.Point(642, 481);
-            this.btnDivide.Name = "btnDivide";
-            this.btnDivide.Size = new System.Drawing.Size(80, 57);
-            this.btnDivide.TabIndex = 25;
-            this.btnDivide.Text = "÷";
-            this.btnDivide.UseVisualStyleBackColor = false;
-            // 
             // btnBackSpace
             // 
             this.btnBackSpace.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnBackSpace.Enabled = false;
             this.btnBackSpace.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackSpace.Location = new System.Drawing.Point(470, 229);
+            this.btnBackSpace.Location = new System.Drawing.Point(354, 474);
             this.btnBackSpace.Name = "btnBackSpace";
             this.btnBackSpace.Size = new System.Drawing.Size(80, 57);
             this.btnBackSpace.TabIndex = 21;
@@ -300,7 +219,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(384, 479);
+            this.btnClear.Location = new System.Drawing.Point(182, 474);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 57);
             this.btnClear.TabIndex = 20;
@@ -312,7 +231,7 @@
             // 
             this.btnF.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnF.Location = new System.Drawing.Point(643, 229);
+            this.btnF.Location = new System.Drawing.Point(96, 476);
             this.btnF.Name = "btnF";
             this.btnF.Size = new System.Drawing.Size(80, 57);
             this.btnF.TabIndex = 24;
@@ -323,7 +242,7 @@
             // 
             this.btnE.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnE.Location = new System.Drawing.Point(557, 229);
+            this.btnE.Location = new System.Drawing.Point(10, 476);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(80, 57);
             this.btnE.TabIndex = 19;
@@ -334,7 +253,7 @@
             // 
             this.btnD.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(643, 166);
+            this.btnD.Location = new System.Drawing.Point(96, 413);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(80, 57);
             this.btnD.TabIndex = 18;
@@ -345,7 +264,7 @@
             // 
             this.btnC.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(557, 166);
+            this.btnC.Location = new System.Drawing.Point(10, 413);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(80, 57);
             this.btnC.TabIndex = 17;
@@ -356,7 +275,7 @@
             // 
             this.btnB.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB.Location = new System.Drawing.Point(643, 103);
+            this.btnB.Location = new System.Drawing.Point(96, 350);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(80, 57);
             this.btnB.TabIndex = 16;
@@ -367,7 +286,7 @@
             // 
             this.btnA.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA.Location = new System.Drawing.Point(557, 103);
+            this.btnA.Location = new System.Drawing.Point(10, 350);
             this.btnA.Name = "btnA";
             this.btnA.Size = new System.Drawing.Size(80, 57);
             this.btnA.TabIndex = 15;
@@ -484,76 +403,45 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemCalculator,
-            this.measurementConverterToolStripMenuItem,
-            this.timeToolStripMenuItem});
+            this.Calculator,
+            this.Measurement,
+            this.Time,
+            this.Programmer});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(747, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(483, 28);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // menuItemCalculator
+            // Calculator
             // 
-            this.menuItemCalculator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regularToolStripMenuItem,
-            this.programmerToolStripMenuItem});
-            this.menuItemCalculator.Name = "menuItemCalculator";
-            this.menuItemCalculator.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.menuItemCalculator.Size = new System.Drawing.Size(88, 24);
-            this.menuItemCalculator.Text = "&Calculator";
-            
+            this.Calculator.Name = "Calculator";
+            this.Calculator.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
+            this.Calculator.Size = new System.Drawing.Size(88, 24);
+            this.Calculator.Text = "&Calculator";
+            this.Calculator.Click += new System.EventHandler(this.Calculator_Click);
             // 
-            // regularToolStripMenuItem
+            // Measurement
             // 
-            this.regularToolStripMenuItem.Name = "regularToolStripMenuItem";
-            this.regularToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.S)));
-            this.regularToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
-            this.regularToolStripMenuItem.Text = "&Standard";
-            this.regularToolStripMenuItem.Click += new System.EventHandler(this.regularToolStripMenuItem_Click);
+            this.Measurement.Name = "Measurement";
+            this.Measurement.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.Measurement.Size = new System.Drawing.Size(111, 24);
+            this.Measurement.Text = "&Measurement";
+            this.Measurement.Click += new System.EventHandler(this.Measurement_Click);
             // 
-            // programmerToolStripMenuItem
+            // Time
             // 
-            this.programmerToolStripMenuItem.Name = "programmerToolStripMenuItem";
-            this.programmerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.P)));
-            this.programmerToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
-            this.programmerToolStripMenuItem.Text = "&Programmer";
+            this.Time.Name = "Time";
+            this.Time.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
+            this.Time.Size = new System.Drawing.Size(54, 24);
+            this.Time.Text = "&Time";
+            this.Time.Click += new System.EventHandler(this.Time_Click);
             // 
-            // measurementConverterToolStripMenuItem
+            // Programmer
             // 
-            this.measurementConverterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uSCustomaryUnitsToolStripMenuItem,
-            this.metricToolStripMenuItem});
-            this.measurementConverterToolStripMenuItem.Name = "measurementConverterToolStripMenuItem";
-            this.measurementConverterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
-            this.measurementConverterToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.measurementConverterToolStripMenuItem.Text = "&Measurement";
-            // 
-            // uSCustomaryUnitsToolStripMenuItem
-            // 
-            this.uSCustomaryUnitsToolStripMenuItem.Name = "uSCustomaryUnitsToolStripMenuItem";
-            this.uSCustomaryUnitsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.U)));
-            this.uSCustomaryUnitsToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.uSCustomaryUnitsToolStripMenuItem.Text = "&US Customary Units";
-            this.uSCustomaryUnitsToolStripMenuItem.Click += new System.EventHandler(this.uSCustomaryUnitsToolStripMenuItem_Click);
-            // 
-            // metricToolStripMenuItem
-            // 
-            this.metricToolStripMenuItem.Name = "metricToolStripMenuItem";
-            this.metricToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.E)));
-            this.metricToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.metricToolStripMenuItem.Text = "M&etric";
-            // 
-            // timeToolStripMenuItem
-            // 
-            this.timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            this.timeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
-            this.timeToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.timeToolStripMenuItem.Text = "&Time";
+            this.Programmer.Name = "Programmer";
+            this.Programmer.Size = new System.Drawing.Size(104, 24);
+            this.Programmer.Text = "Programmer";
             // 
             // Form1
             // 
@@ -561,7 +449,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(747, 622);
+            this.ClientSize = new System.Drawing.Size(483, 622);
             this.Controls.Add(this.radHex);
             this.Controls.Add(this.lblBIN);
             this.Controls.Add(this.lblOCT);
@@ -576,6 +464,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
+            
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -615,20 +504,11 @@
         private System.Windows.Forms.Label lblHEX;
         private System.Windows.Forms.Label lblOCT;
         private System.Windows.Forms.Label lblBIN;
-        private System.Windows.Forms.Button btnPlus;
-        private System.Windows.Forms.Button btnSubtract;
-        private System.Windows.Forms.Button btnMultiply;
-        private System.Windows.Forms.Button btnDivide;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuItemCalculator;
-        private System.Windows.Forms.ToolStripMenuItem measurementConverterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem timeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programmerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem uSCustomaryUnitsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem metricToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Calculator;
+        private System.Windows.Forms.ToolStripMenuItem Measurement;
+        private System.Windows.Forms.ToolStripMenuItem Time;
+        private System.Windows.Forms.ToolStripMenuItem Programmer;
     }
 }
 

@@ -51,5 +51,36 @@ namespace Calculator
         {
             lblTimeNow.Text = DateTime.Now.ToLongTimeString();
         }
+
+
+        // The next four EventListeners check if a menu it has been Clicked
+        // If so they open a new form and close this form
+
+        private void programmerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            f.Location = Location;
+            Close();
+        }
+
+        private void measurementConverterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MeasurementConverter mc = new MeasurementConverter();
+            mc.Show();
+            mc.Location = Location;
+            Close();
+        }
+
+        private void Calculator_Click(object sender, EventArgs e)
+        {
+            StandardCalculator sc = new StandardCalculator();
+            sc.Show();
+            sc.Location = Location;
+            Close();
+        }
+
+       
+        
     }
 }

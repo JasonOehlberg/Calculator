@@ -1,6 +1,7 @@
 ﻿// Author: Jason Oehlberg
 
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -192,6 +193,30 @@ namespace Calculator
             MeasurementConverter mc = new MeasurementConverter();
             mc.Show();
             this.Hide();
+        }
+
+        private void Calculator_Click(object sender, EventArgs e)
+        {
+            StandardCalculator sc = new StandardCalculator();
+            sc.Show();
+            sc.Location = Location;
+            Close();
+        }
+
+        private void Measurement_Click(object sender, EventArgs e)
+        {
+            MeasurementConverter mc = new MeasurementConverter();
+            mc.Show();
+            mc.Location = Location;
+            Close();
+        }
+
+        private void Time_Click(object sender, EventArgs e)
+        {
+            Time t = new Time();
+            t.Show();
+            t.Location = Location;
+            Close();
         }
 
     }   

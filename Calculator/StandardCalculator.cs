@@ -141,16 +141,10 @@ namespace Calculator
             calc.DecimalPressed = false;
         }
 
-        private void programmerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form1 f = new Form1();
-            f.Show();
-            f.Location = this.Location;
-            this.Hide();
-        }
-
+        // Action for C Button is Clicked
         private void btnC_Click(object sender, EventArgs e)
         {
+            // everything is set back to default and cleared
             lblInput.Text = "0";
             lblEquation.Text = "";
             calc.Total = 0;
@@ -158,49 +152,92 @@ namespace Calculator
             calc.OperatorPressed = false;
         }
 
+        // Action for CE Button Clicked
         private void btnCE_Click(object sender, EventArgs e)
         {
+            // only the lblInput is set back to default
             lblInput.Text = "0";
         }
 
+        // Action when Decimal Button is Clicked
         private void btnDecimal_Click(object sender, EventArgs e)
         {
+            // if the label is set to default or the equals has been pressed and DecimalPressed has not been activated
             if ((lblInput.Text.Equals("0") || calc.Operator.Equals("=")) && calc.DecimalPressed == false)
             {
+                // then zero followed by decimal
                 lblInput.Text = "0.";
             }
             else if (calc.DecimalPressed)
             {
+                // Decimal is pressed again does nothing
                 return;
             }
             else
             {
+                // first time decimal has been pressed in a sequence of numbers
                 lblInput.Text += ((Button)sender).Text;
             }
             calc.DecimalPressed = true;
         }
 
+        // Actions for he +/- Button
         private void btnPosNeg_Click(object sender, EventArgs e)
         {
+            // text is set to the negative of the value oft the string
             lblInput.Text = calc.negate(lblInput.Text);
         }
 
+        // Actions for the BackSpace Button
         private void btnBackSpace_Click(object sender, EventArgs e)
         {
+            // If the label is set to default
             if (lblInput.Text.Equals("0"))
             {
                 return;
             }
             else
             {
+                // If not at default it removes the last digit
                 string removeTemp = lblInput.Text.Remove(lblInput.Text.Length - 1, 1);
                 lblInput.Text = removeTemp;
+                // when the string array is empty sets back to default
                 if (lblInput.Text.Equals(""))
                 {
                     lblInput.Text = "0";
                 }
             }
             
+        }
+
+        // Action for the programmer Menu Item
+
+        private void measurementConverterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MeasurementConverter mc = new MeasurementConverter();
+            mc.Owner = this;
+            mc.Show();
+            mc.Location = Location;
+            Hide();
+        }
+
+        private void timeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Time t = new Time();
+            t.Owner = this;
+            t.Show();
+            t.Location = Location;
+            Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Owner = this;
+            f.Show();
+            f.Location = Location;
+            Hide();
+
         }
     }
 }

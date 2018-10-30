@@ -292,6 +292,42 @@ namespace Calculator
             }
            
         }
-            
+
+        // Opens the Standard Calculator From if the X on the window bar is clicked
+    
+
+        // All below open a new form and close the current one when clicked
+        private void Calculator_Click(object sender, EventArgs e)
+        {
+            StandardCalculator sc = new StandardCalculator();
+            sc.Show();
+            sc.Location = Location;
+            Close();
+        }
+
+        private void Measurement_Click(object sender, EventArgs e)
+        {
+            MeasurementConverter mc = new MeasurementConverter();
+            mc.Show();
+            mc.Location = Location;
+            Close();
+        }
+
+        private void Time_Click(object sender, EventArgs e)
+        {
+            Time t = new Time();
+            t.Show();
+            t.Location = Location;
+            Close();
+        }
+
+        private void Programmer_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            f.Location = Location;
+            Close();
+        }
+
     }
 }

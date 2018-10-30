@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuItemCalculator = new System.Windows.Forms.ToolStripMenuItem();
-            this.regularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programmerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.measurementConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uSCustomaryUnitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Calculator = new System.Windows.Forms.ToolStripMenuItem();
+            this.Measurement = new System.Windows.Forms.ToolStripMenuItem();
+            this.Time = new System.Windows.Forms.ToolStripMenuItem();
+            this.Programmer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBackSpace = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
@@ -90,73 +87,46 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemCalculator,
-            this.measurementConverterToolStripMenuItem,
-            this.timeToolStripMenuItem});
+            this.Calculator,
+            this.Measurement,
+            this.Time,
+            this.Programmer});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(669, 28);
             this.menuStrip1.TabIndex = 31;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // menuItemCalculator
+            // Calculator
             // 
-            this.menuItemCalculator.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regularToolStripMenuItem,
-            this.programmerToolStripMenuItem});
-            this.menuItemCalculator.Name = "menuItemCalculator";
-            this.menuItemCalculator.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.menuItemCalculator.Size = new System.Drawing.Size(88, 24);
-            this.menuItemCalculator.Text = "&Calculator";
+            this.Calculator.Name = "Calculator";
+            this.Calculator.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
+            this.Calculator.Size = new System.Drawing.Size(88, 24);
+            this.Calculator.Text = "&Calculator";
+            this.Calculator.Click += new System.EventHandler(this.Calculator_Click);
             // 
-            // regularToolStripMenuItem
+            // Measurement
             // 
-            this.regularToolStripMenuItem.Name = "regularToolStripMenuItem";
-            this.regularToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.S)));
-            this.regularToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
-            this.regularToolStripMenuItem.Text = "&Standard";
+            this.Measurement.Name = "Measurement";
+            this.Measurement.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.Measurement.Size = new System.Drawing.Size(111, 24);
+            this.Measurement.Text = "&Measurement";
+            this.Measurement.Click += new System.EventHandler(this.Measurement_Click);
             // 
-            // programmerToolStripMenuItem
+            // Time
             // 
-            this.programmerToolStripMenuItem.Name = "programmerToolStripMenuItem";
-            this.programmerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.P)));
-            this.programmerToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
-            this.programmerToolStripMenuItem.Text = "&Programmer";
+            this.Time.Name = "Time";
+            this.Time.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
+            this.Time.Size = new System.Drawing.Size(54, 24);
+            this.Time.Text = "&Time";
+            this.Time.Click += new System.EventHandler(this.Time_Click);
             // 
-            // measurementConverterToolStripMenuItem
+            // Programmer
             // 
-            this.measurementConverterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uSCustomaryUnitsToolStripMenuItem,
-            this.metricToolStripMenuItem});
-            this.measurementConverterToolStripMenuItem.Name = "measurementConverterToolStripMenuItem";
-            this.measurementConverterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
-            this.measurementConverterToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.measurementConverterToolStripMenuItem.Text = "&Measurement";
-            // 
-            // uSCustomaryUnitsToolStripMenuItem
-            // 
-            this.uSCustomaryUnitsToolStripMenuItem.Name = "uSCustomaryUnitsToolStripMenuItem";
-            this.uSCustomaryUnitsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.U)));
-            this.uSCustomaryUnitsToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.uSCustomaryUnitsToolStripMenuItem.Text = "&US Customary Units";
-            // 
-            // metricToolStripMenuItem
-            // 
-            this.metricToolStripMenuItem.Name = "metricToolStripMenuItem";
-            this.metricToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.E)));
-            this.metricToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.metricToolStripMenuItem.Text = "M&etric";
-            // 
-            // timeToolStripMenuItem
-            // 
-            this.timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            this.timeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
-            this.timeToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.timeToolStripMenuItem.Text = "&Time";
+            this.Programmer.Name = "Programmer";
+            this.Programmer.Size = new System.Drawing.Size(104, 24);
+            this.Programmer.Text = "Programmer";
+            this.Programmer.Click += new System.EventHandler(this.Programmer_Click);
             // 
             // btnBackSpace
             // 
@@ -715,6 +685,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "MeasurementConverter";
             this.Text = "MeasurementConverter";
+            
             this.Load += new System.EventHandler(this.MeasurementConverter_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -731,13 +702,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuItemCalculator;
-        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programmerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem measurementConverterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem uSCustomaryUnitsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem metricToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem timeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Calculator;
+        private System.Windows.Forms.ToolStripMenuItem Measurement;
+        private System.Windows.Forms.ToolStripMenuItem Time;
         private System.Windows.Forms.Button btnBackSpace;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btn0;
@@ -782,5 +749,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ToolStripMenuItem Programmer;
     }
 }

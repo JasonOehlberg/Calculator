@@ -19,10 +19,11 @@ namespace Calculator
         [STAThread]
         static void Main()
         {
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MeasurementConverter());
-           
+            StandardCalculator st = new StandardCalculator();
+            Application.Run(st);
         }
     }
 }
