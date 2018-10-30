@@ -64,14 +64,15 @@ namespace Calculator
 
         public string metricConvert(string value, double conversion)
         {
-            UInt64 temp = Convert.ToUInt64(value);
+            double temp = Convert.ToDouble(value);
             return (temp * conversion).ToString();
         }
 
         public string usConvert(string value, double conversion)
         {
 
-            UInt64 temp = Convert.ToUInt64(value);
+            double temp = Convert.ToDouble(value);
+            Debug.WriteLine("US convert temp value: " + temp);
             return (temp * conversion).ToString();
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -66,7 +67,6 @@ namespace Calculator
 
         private void Button_Click(Object sender, EventArgs e)
         {
-            
             if (lblInput.Text.Equals("0"))
             {
                 lblInput.Text = "";
@@ -77,12 +77,14 @@ namespace Calculator
 
                 lblInput.Text += ((Button)sender).Text;
             }
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             lblInput.Text = "0";
+            lblDataLarge.Text = "";
+            lblDataMiddle.Text = "";
+            lblDataSmall.Text = "";
         }
 
         private void btnBackSpace_Click(object sender, EventArgs e)
@@ -119,17 +121,30 @@ namespace Calculator
             mc.DecimalPressed = true;
         }
 
+        private ArrayList getListType(string name, string id)
+        {
+            if (name.Equals("US Standard"))
+            {
+                return mc.getMetricList(id);
+            }
+            else
+                return mc.getUSList(id);
+        }
+
         private void RadioConvert_CheckedChanged(Object sender, EventArgs e)
         {
-            foreach(RadioButton rbConvertTo in getConvertToRadBtn())
+            foreach(RadioButton rbConvert in getConvertToRadBtn())
             {
-                if (((RadioButton)sender).Text.Equals(rbConvertTo.Text)){
-                    foreach (RadioButton rb in getMeasurementRadBtn())
+   
+                if (((RadioButton)sender).Text.Equals(rbConvert.Text))
+                {
+                    foreach (RadioButton rbMeasure in getMeasurementRadBtn())
                     {
-                        if (rb.Checked)
-                        {
+                        if (rbMeasure.Checked)
+                        { 
                             cbUnitType.Items.Clear();
-                            foreach (string item in mc.getMetricList(rb.Text))
+                            
+                            foreach (string item in getListType(rbConvert.Text, rbMeasure.Text))
                             {
                                 cbUnitType.Items.Add(item);
                             }
@@ -138,87 +153,27 @@ namespace Calculator
                     }
                 }
             }
-            /*if (((RadioButton)sender).Text.Equals("US Standard"))
-            {
-                
-                if (radDistance.Checked)
-                {
-                    cbUnitType.Items.Clear();
-
-                    foreach (string item in mc.getMetricList("Distance"))
-                        cbUnitType.Items.Add(item);
-                    cbUnitType.SelectedIndex = 0;
-                }
-                else if (radVolume.Checked)
-                {
-                    cbUnitType.Items.Clear();
-
-                    foreach (string item in mc.getMetricList("Volume"))
-                        cbUnitType.Items.Add(item);
-                    cbUnitType.SelectedIndex = 0;
-                }
-                else if (radWeight.Checked)
-                {
-                    cbUnitType.Items.Clear();
-
-                    foreach (string item in mc.getMetricList("Weight"))
-                        cbUnitType.Items.Add(item);
-                    cbUnitType.SelectedIndex = 0;
-                }
-            }
-            else if (((RadioButton)sender).Text.Equals("Metric"))
-            {
-                if (radDistance.Checked)
-                {
-                    cbUnitType.Items.Clear();
-
-                    foreach (string item in mc.getUSList("Distance"))
-                        cbUnitType.Items.Add(item);
-                    cbUnitType.SelectedIndex = 0;
-                }
-                else if (radVolume.Checked)
-                {
-                    cbUnitType.Items.Clear();
-
-                    foreach (string item in mc.getUSList("Volume"))
-                        cbUnitType.Items.Add(item);
-                    cbUnitType.SelectedIndex = 0;
-                }
-                else if (radWeight.Checked)
-                {
-                    cbUnitType.Items.Clear();
-
-                    foreach (string item in mc.getUSList("Weight"))
-                        cbUnitType.Items.Add(item);
-                    cbUnitType.SelectedIndex = 0;
-                }
-            }*/
         }
 
         private void RadioMeasure_CheckedChanged(Object sender, EventArgs e)
-        {
-            
-            cbUnitType.Items.Clear();
-            string id = ((RadioButton)sender).Text;
-            if (radMetric.Checked)
+        { 
+            foreach(RadioButton rbMeasure in getMeasurementRadBtn())
             {
-
-                foreach (string item in mc.getUSList(id))
+                if (((RadioButton)sender).Text.Equals(rbMeasure.Text))
                 {
-                    cbUnitType.Items.Add(item);
+                    foreach (RadioButton rbConvert in getConvertToRadBtn())
+                    {
+                        if (rbConvert.Checked)
+                        {
+                            cbUnitType.Items.Clear();
+                            foreach (string item in getListType(rbConvert.Text, rbMeasure.Text))
+                            {
+                                cbUnitType.Items.Add(item);
+                            }
+                            cbUnitType.SelectedIndex = 0;
+                        }
+                    }
                 }
-                cbUnitType.SelectedIndex = 0;
-                
-
-            }
-            if (radUS.Checked)
-            {
-               
-                foreach (string item in mc.getMetricList(id))
-                {
-                    cbUnitType.Items.Add(item);
-                }
-                cbUnitType.SelectedIndex = 0;
             }
         }
 
@@ -236,8 +191,7 @@ namespace Calculator
             {
                 Debug.WriteLine(type);
                 string convertedValue = "";
-                //UnitType[] ut = new UnitType[mc.getMetricUnitList(type).Length];
-                //ut.CopyTo(mc.getMetricUnitList(type), mc.getMetricUnitList(type).Length);
+               
                 for (int i = 0; i < mc.getMetricUnitList(type).Length; i++)
                 {
                     if (mc.getMetricUnitList(type)[i].Name.Equals(cbUnitType.Text))
@@ -246,15 +200,14 @@ namespace Calculator
                         convertedValue = mc.convertToOtherFormat(temp, type, mc.getMetricUnitList(type)[i].IsMetric);
                     }
                 }
-                lblDataSmall.Text = (Convert.ToDouble(convertedValue) / mc.getUSUnitList(type)[0].Conversion).ToString() + " " + mc.getUSUnitList(type)[0];
-                lblDataMiddle.Text = convertedValue;
-                lblDataLarge.Text = (Convert.ToDouble(convertedValue) / mc.getUSUnitList(type)[2].Conversion).ToString() + " " + mc.getUSUnitList(type)[2];
+                lblDataSmall.Text = (Convert.ToDouble(convertedValue) / mc.getUSUnitList(type)[0].Conversion).ToString() + " " + mc.getUSUnitList(type)[0].Name;
+                lblDataMiddle.Text = convertedValue + " " + mc.getUSUnitList(type)[1].Name;
+                lblDataLarge.Text = (Convert.ToDouble(convertedValue) / mc.getUSUnitList(type)[2].Conversion).ToString() + " " + mc.getUSUnitList(type)[2].Name;
             }
             else if (radMetric.Checked)
             {
                 string convertedValue = "";
-                //UnitType[] ut = new UnitType[mc.getUSUnitList(type).Length];
-                //ut.CopyTo(mc.getUSUnitList(type), mc.getUSUnitList(type).Length);
+                
                 for (int i = 0; i < mc.getUSUnitList(type).Length; i++)
                 {
                     if (mc.getUSUnitList(type)[i].Name.Equals(cbUnitType.Text))
@@ -263,6 +216,7 @@ namespace Calculator
                         convertedValue = mc.convertToOtherFormat(temp, type, mc.getUSUnitList(type)[i].IsMetric);
                     }
                 }
+                Debug.WriteLine("Converted Value: " + convertedValue);
                 lblDataSmall.Text = (Convert.ToDouble(convertedValue) / mc.getMetricUnitList(type)[0].Conversion).ToString() + " " + mc.getMetricUnitList(type)[0].Name; 
                 lblDataMiddle.Text = convertedValue + " " + mc.getMetricUnitList(type)[1].Name;
                 lblDataLarge.Text = (Convert.ToDouble(convertedValue) / mc.getMetricUnitList(type)[2].Conversion).ToString() + " " + mc.getMetricUnitList(type)[1].Name; 
