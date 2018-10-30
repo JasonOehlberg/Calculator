@@ -78,7 +78,7 @@
             this.lblUnitTypeSmall = new System.Windows.Forms.Label();
             this.lblDataSmall = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCalculate = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -663,17 +663,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert To";
             // 
-            // button1
+            // btnCalculate
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(448, 456);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 65);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCalculate.AutoSize = true;
+            this.btnCalculate.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCalculate.Font = new System.Drawing.Font("Arial Unicode MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculate.Location = new System.Drawing.Point(448, 456);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(209, 65);
+            this.btnCalculate.TabIndex = 94;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = false;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // groupBox2
             // 
@@ -693,7 +694,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 528);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblInput);
@@ -779,7 +780,7 @@
         private System.Windows.Forms.Label lblOptionalData;
         private System.Windows.Forms.Label lblOptionalDataType;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.GroupBox groupBox2;
     }
 }

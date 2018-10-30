@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,50 +12,105 @@ namespace Calculator
     {
         public bool DecimalPressed { get; set; }
 
-        private string[] metricVolume = { "milliliter", "liter", "cubic meter" };
-        private string[] metricWeight = { "milligram", "gram", "kilogram" };
-        private string[] metricDistance = { "millimeter", "centimeter", "meter", "kilometer" };
-        private string[] usVolume = { "fluid oz", "pint", "gallon" };
-        private string[] usWeight = { "ounce", "pound" };
-        private string[] usDistance = { "inch", "foot", "yard", "mile" };
+        private readonly Dictionary<string, UnitType[]> us;
+        private readonly Dictionary<string, UnitType[]> metric;
 
-        private readonly Dictionary<string, string[]> us;
-        private readonly Dictionary<string, string[]> metric;
-        private readonly Dictionary<string, double[]> usConversion;
-        private readonly Dictionary<string, double[]> metricConverion;
 
         public MeasurementCalc()
         {
-            us = new Dictionary<string, string[]>
+            metric = new Dictionary<string, UnitType[]>
             {
-                { "Volume", usVolume },
-                { "Weight", usWeight },
-                { "Distance", usDistance }
+                { "Volume", new UnitType[3] { new UnitType("Milliliter", 0.001, true) , new UnitType("Liter", 1, true), new UnitType("Cubic Meter", 1000, true)} },
+                { "Weight", new UnitType[3] { new UnitType("Milligram", 0.001, true), new UnitType("Gram", 1, true), new UnitType("Kilogram", 1000, true) } },
+                { "Distance", new UnitType[3] { new UnitType("Millimeter", 0.001, true) , new UnitType("Meter", 1, true), new UnitType("Kilometer", 1000, true)}  }
             };
-            metric = new Dictionary<string, string[]>
+            us = new Dictionary<string, UnitType[]>
             {
-                { "Volume", metricVolume },
-                { "Weight", metricWeight },
-                { "Distance", metricDistance }
-
+                { "Volume", new UnitType[3] { new UnitType("Fluid Ounce", 0.0625, false) , new UnitType("Pint", 1, false), new UnitType("Gallon", 8, false) } },
+                { "Weight", new UnitType[3] { new UnitType("Ounce", 0.0625, false) , new UnitType("Pound", 1, false), new UnitType("Ton", 2000, false) } },
+                { "Distance", new UnitType[3] { new UnitType("Inch", 0.0833333, false) , new UnitType("Feet", 1, false), new UnitType("Mile", 5280, false) } }
             };
         }
 
-        public string[] getUSList(string id)
+        public UnitType[] getUSUnitList(string type)
         {
-            return us[id];
+            return us[type];
         }
 
-        public string[] getMetricList(string id)
+        public UnitType[] getMetricUnitList(string type)
         {
-            return metric[id];
+            return metric[type];
         }
 
-        public string convertFromMilli(string s)
+        public ArrayList getUSList(string id)
         {
-            UInt64 temp = Convert.ToUInt64(s);
+            ArrayList temp = new ArrayList();
+            foreach(UnitType type in us[id])
+            {
+                temp.Add(type.Name);
+            }
+            return temp;
+        }
 
-            return "";
+        public ArrayList getMetricList(string id)
+        {
+            ArrayList temp = new ArrayList();
+            foreach (UnitType type in metric[id])
+            {
+                temp.Add(type.Name);
+            }
+            return temp;
+        }
+
+        public string metricConvert(string value, double conversion)
+        {
+            UInt64 temp = Convert.ToUInt64(value);
+            return (temp * conversion).ToString();
+        }
+
+        public string usConvert(string value, double conversion)
+        {
+
+            UInt64 temp = Convert.ToUInt64(value);
+            return (temp * conversion).ToString();
+        }
+
+        public string convertToOtherFormat(string value, string type, bool isMetric)
+        {
+            double temp = Convert.ToDouble(value);
+            if (isMetric)
+            {
+                Debug.WriteLine("Im in convertToOtherFormat if statement");
+                if (type.Equals("Volume"))
+                {
+                    return (temp * 2.11338).ToString();
+                }
+                else if (type.Equals("Weight"))
+                {
+                    return (temp * 0.00220462).ToString();
+                }
+                else if (type.Equals("Distance"))
+                {
+                    return (temp * 3.28084).ToString();
+                }
+                else return "Something went wrong";
+            }
+            else
+            {
+                if (type.Equals("Volume"))
+                {
+                    return (temp * 0.473176).ToString();
+                }
+                else if (type.Equals("Weight"))
+                {
+                    return (temp * 453.592).ToString();
+                }
+                else if (type.Equals("Distance"))
+                {
+                    return (temp * 0.3048).ToString();
+                }
+                else return "Something went wrong.";
+            }
         }
 
     }

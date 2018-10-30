@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -120,8 +121,26 @@ namespace Calculator
 
         private void RadioConvert_CheckedChanged(Object sender, EventArgs e)
         {
-            if (((RadioButton)sender).Text.Equals("US Standard"))
+            foreach(RadioButton rbConvertTo in getConvertToRadBtn())
             {
+                if (((RadioButton)sender).Text.Equals(rbConvertTo.Text)){
+                    foreach (RadioButton rb in getMeasurementRadBtn())
+                    {
+                        if (rb.Checked)
+                        {
+                            cbUnitType.Items.Clear();
+                            foreach (string item in mc.getMetricList(rb.Text))
+                            {
+                                cbUnitType.Items.Add(item);
+                            }
+                            cbUnitType.SelectedIndex = 0;
+                        }
+                    }
+                }
+            }
+            /*if (((RadioButton)sender).Text.Equals("US Standard"))
+            {
+                
                 if (radDistance.Checked)
                 {
                     cbUnitType.Items.Clear();
@@ -147,7 +166,8 @@ namespace Calculator
                     cbUnitType.SelectedIndex = 0;
                 }
             }
-            else if(((RadioButton)sender).Text.Equals("Metric")){
+            else if (((RadioButton)sender).Text.Equals("Metric"))
+            {
                 if (radDistance.Checked)
                 {
                     cbUnitType.Items.Clear();
@@ -172,7 +192,7 @@ namespace Calculator
                         cbUnitType.Items.Add(item);
                     cbUnitType.SelectedIndex = 0;
                 }
-            }
+            }*/
         }
 
         private void RadioMeasure_CheckedChanged(Object sender, EventArgs e)
@@ -188,12 +208,13 @@ namespace Calculator
                     cbUnitType.Items.Add(item);
                 }
                 cbUnitType.SelectedIndex = 0;
+                
 
             }
             if (radUS.Checked)
             {
                
-                foreach (string item in mc.getUSList(id))
+                foreach (string item in mc.getMetricList(id))
                 {
                     cbUnitType.Items.Add(item);
                 }
@@ -201,5 +222,52 @@ namespace Calculator
             }
         }
 
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            string type = "";
+            foreach (RadioButton rb in getMeasurementRadBtn())
+            {
+                if (rb.Checked)
+                {
+                    type = rb.Text;
+                }
+            }
+            if (radUS.Checked)
+            {
+                Debug.WriteLine(type);
+                string convertedValue = "";
+                //UnitType[] ut = new UnitType[mc.getMetricUnitList(type).Length];
+                //ut.CopyTo(mc.getMetricUnitList(type), mc.getMetricUnitList(type).Length);
+                for (int i = 0; i < mc.getMetricUnitList(type).Length; i++)
+                {
+                    if (mc.getMetricUnitList(type)[i].Name.Equals(cbUnitType.Text))
+                    {
+                        string temp = mc.metricConvert(lblInput.Text, mc.getMetricUnitList(type)[i].Conversion);
+                        convertedValue = mc.convertToOtherFormat(temp, type, mc.getMetricUnitList(type)[i].IsMetric);
+                    }
+                }
+                lblDataSmall.Text = (Convert.ToDouble(convertedValue) / mc.getUSUnitList(type)[0].Conversion).ToString() + " " + mc.getUSUnitList(type)[0];
+                lblDataMiddle.Text = convertedValue;
+                lblDataLarge.Text = (Convert.ToDouble(convertedValue) / mc.getUSUnitList(type)[2].Conversion).ToString() + " " + mc.getUSUnitList(type)[2];
+            }
+            else if (radMetric.Checked)
+            {
+                string convertedValue = "";
+                //UnitType[] ut = new UnitType[mc.getUSUnitList(type).Length];
+                //ut.CopyTo(mc.getUSUnitList(type), mc.getUSUnitList(type).Length);
+                for (int i = 0; i < mc.getUSUnitList(type).Length; i++)
+                {
+                    if (mc.getUSUnitList(type)[i].Name.Equals(cbUnitType.Text))
+                    {
+                        string temp = mc.usConvert(lblInput.Text, mc.getUSUnitList(type)[i].Conversion);
+                        convertedValue = mc.convertToOtherFormat(temp, type, mc.getUSUnitList(type)[i].IsMetric);
+                    }
+                }
+                lblDataSmall.Text = (Convert.ToDouble(convertedValue) / mc.getMetricUnitList(type)[0].Conversion).ToString() + " " + mc.getMetricUnitList(type)[0].Name; 
+                lblDataMiddle.Text = convertedValue + " " + mc.getMetricUnitList(type)[1].Name;
+                lblDataLarge.Text = (Convert.ToDouble(convertedValue) / mc.getMetricUnitList(type)[2].Conversion).ToString() + " " + mc.getMetricUnitList(type)[1].Name; 
+            }
+        }
+            
     }
 }

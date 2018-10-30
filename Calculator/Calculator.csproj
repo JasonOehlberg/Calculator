@@ -74,6 +74,8 @@
     <Compile Include="Time.Designer.cs">
       <DependentUpon>Time.cs</DependentUpon>
     </Compile>
+    <Compile Include="TimeModel.cs" />
+    <Compile Include="UnitType.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
