@@ -64,12 +64,12 @@
             this.lblBIN = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuItemCalculator = new System.Windows.Forms.ToolStripMenuItem();
-            this.measurementConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programmerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.measurementConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uSCustomaryUnitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metricToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -502,23 +502,7 @@
             this.menuItemCalculator.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.menuItemCalculator.Size = new System.Drawing.Size(88, 24);
             this.menuItemCalculator.Text = "&Calculator";
-            // 
-            // measurementConverterToolStripMenuItem
-            // 
-            this.measurementConverterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uSCustomaryUnitsToolStripMenuItem,
-            this.metricToolStripMenuItem});
-            this.measurementConverterToolStripMenuItem.Name = "measurementConverterToolStripMenuItem";
-            this.measurementConverterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
-            this.measurementConverterToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.measurementConverterToolStripMenuItem.Text = "&Measurement";
-            // 
-            // timeToolStripMenuItem
-            // 
-            this.timeToolStripMenuItem.Name = "timeToolStripMenuItem";
-            this.timeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
-            this.timeToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.timeToolStripMenuItem.Text = "&Time";
+            
             // 
             // regularToolStripMenuItem
             // 
@@ -537,6 +521,16 @@
             this.programmerToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.programmerToolStripMenuItem.Text = "&Programmer";
             // 
+            // measurementConverterToolStripMenuItem
+            // 
+            this.measurementConverterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uSCustomaryUnitsToolStripMenuItem,
+            this.metricToolStripMenuItem});
+            this.measurementConverterToolStripMenuItem.Name = "measurementConverterToolStripMenuItem";
+            this.measurementConverterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.measurementConverterToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.measurementConverterToolStripMenuItem.Text = "&Measurement";
+            // 
             // uSCustomaryUnitsToolStripMenuItem
             // 
             this.uSCustomaryUnitsToolStripMenuItem.Name = "uSCustomaryUnitsToolStripMenuItem";
@@ -553,6 +547,13 @@
             | System.Windows.Forms.Keys.E)));
             this.metricToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
             this.metricToolStripMenuItem.Text = "M&etric";
+            // 
+            // timeToolStripMenuItem
+            // 
+            this.timeToolStripMenuItem.Name = "timeToolStripMenuItem";
+            this.timeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
+            this.timeToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.timeToolStripMenuItem.Text = "&Time";
             // 
             // Form1
             // 

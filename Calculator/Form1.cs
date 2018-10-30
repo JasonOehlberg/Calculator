@@ -1,9 +1,4 @@
-﻿/*
- Jason Oehlberg
- CS.4253 Windows Programming
- Homework 2: Conversion Calculator
- Due: 2018.09.25
- */
+﻿// Author: Jason Oehlberg
 
 using System;
 using System.Windows.Forms;
@@ -198,6 +193,7 @@ namespace Calculator
             mc.Show();
             this.Hide();
         }
+
     }   
 }
 

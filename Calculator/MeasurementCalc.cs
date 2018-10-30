@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Author: Jason Oehlberg
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,14 +12,17 @@ namespace Calculator
 {
     class MeasurementCalc
     {
+        // Property holding if the Decimal Button has been pressed
         public bool DecimalPressed { get; set; }
 
+        // Dictionaries holding the instances of the UnitType objeccts
         private readonly Dictionary<string, UnitType[]> us;
         private readonly Dictionary<string, UnitType[]> metric;
 
 
         public MeasurementCalc()
         {
+            // creating instances of the UnitType arrays each with a type discription as the key for easy access in Measurement Converter
             metric = new Dictionary<string, UnitType[]>
             {
                 { "Volume", new UnitType[3] { new UnitType("Milliliter", 0.001, true) , new UnitType("Liter", 1, true), new UnitType("Cubic Meter", 1000, true)} },
@@ -32,16 +37,19 @@ namespace Calculator
             };
         }
 
+        // returns the US Unit list UnitType array
         public UnitType[] getUSUnitList(string type)
         {
             return us[type];
         }
 
+        // returns the Metric list UnitType array
         public UnitType[] getMetricUnitList(string type)
         {
             return metric[type];
         }
 
+        // returns an ArrayList of strings to populate a ComboBox for US conversion
         public ArrayList getUSList(string id)
         {
             ArrayList temp = new ArrayList();
@@ -52,6 +60,7 @@ namespace Calculator
             return temp;
         }
 
+        // returns an ArrayList of strings to populate a ComboBox for Metric conversion
         public ArrayList getMetricList(string id)
         {
             ArrayList temp = new ArrayList();
@@ -62,20 +71,19 @@ namespace Calculator
             return temp;
         }
 
-        public string metricConvert(string value, double conversion)
+        // converts a number to its base unit
+        public string convert(string value, double conversion)
         {
             double temp = Convert.ToDouble(value);
             return (temp * conversion).ToString();
         }
 
-        public string usConvert(string value, double conversion)
-        {
+        //****************************************
+        // *******   NEEDS REFACTORING    ********
+        //****************************************
 
-            double temp = Convert.ToDouble(value);
-            Debug.WriteLine("US convert temp value: " + temp);
-            return (temp * conversion).ToString();
-        }
-
+        // passes the value from the lblInput compares the type with a string and returns a value multipled with a conversion
+        // isMetric decides which unit path it goes down
         public string convertToOtherFormat(string value, string type, bool isMetric)
         {
             double temp = Convert.ToDouble(value);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Author: Jason Oehlberg
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,7 @@ namespace Calculator
 {
     class TimeModel
     {
-        
+        // Simple operation for subtracting time and formating it
         public string subtractTime (DateTime time1, DateTime time2)
         {
             if(time1 > time2)

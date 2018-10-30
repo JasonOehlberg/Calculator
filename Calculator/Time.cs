@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Author: Jason Oehlberg
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,11 +21,15 @@ namespace Calculator
         public Time()
         {
             InitializeComponent();
+            // Initializes the title
             this.Text = "Date Time Calculator";
+            // No Icon
             this.ShowIcon = false;
+            // Instance of the timeModel class
             timeModel = new TimeModel();
         }
 
+        // Sets each label and dateTimePicker to default value
         private void Time_Load(object sender, EventArgs e)
         {
             lblTimeStarted.Text = DateTime.Now.ToLongTimeString();
@@ -33,11 +39,14 @@ namespace Calculator
             dtPickEnd.CustomFormat = "MM/dd/yyyy hh:mm:ss tt";
         }
 
+        // Action for Calculate Button when clicked
         private void btnCalculateTime_Click(object sender, EventArgs e)
         {
+            // Calculate the elapse time
             lblTimeElapsed.Text = timeModel.subtractTime(dtPickEnd.Value, dtPickStart.Value);
         }
 
+        // Tick Event for the Timer object to keep populating the time now every second
         private void programTimer_Tick(object sender, EventArgs e)
         {
             lblTimeNow.Text = DateTime.Now.ToLongTimeString();
