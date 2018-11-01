@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Author: Jason Oehlberg
+// Program: Calculator
+// Date: 2018.10.31
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

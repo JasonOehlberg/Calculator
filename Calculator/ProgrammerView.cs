@@ -1,4 +1,5 @@
 ﻿// Author: Jason Oehlberg
+// Program: Calculator
 
 using System;
 using System.Diagnostics;
@@ -6,10 +7,10 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class ProgrammerView : Form
     {
 
-        public Form1()
+        public ProgrammerView()
         {
             InitializeComponent();
         }
@@ -84,14 +85,6 @@ namespace Calculator
             }
         }
 
-        // method for removing the last digit on the input text
-        // NEEDS WORK -- NOT FINISHED
-        private void backSpace()
-        {
-            lblInput.Text = lblInput.Text.Remove(lblInput.Text.Length - 1);
-        }
-
-
         // EventListener handling Clicks for the Button array
         private void Button_Click(object sender, EventArgs e)
         {
@@ -102,8 +95,9 @@ namespace Calculator
             lblInput.Text += b;
 
             // creates an instance of the Operation class
-            Operation op = new Operation();
+            ProgrammerControl op = new ProgrammerControl();
 
+            //*******  NEEDS REFACToRING  ********
             // whenever any of the input buttons are clicked it evaluates the radio button checked
             // next, it converts to all the different numeric types
             // for ease of code each numeric type is converted into decimal and back into each individual type
@@ -183,42 +177,51 @@ namespace Calculator
             hideButtons(getNumberButtons(), 10);
         }
 
-        private void regularToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void uSCustomaryUnitsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MeasurementConverter mc = new MeasurementConverter();
-            mc.Show();
-            this.Hide();
-        }
-
+        // Actions for the Menu Button Clicks
         private void Calculator_Click(object sender, EventArgs e)
         {
-            StandardCalculator sc = new StandardCalculator();
-            sc.Show();
-            sc.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("StandardCalculator").Show();
         }
 
         private void Measurement_Click(object sender, EventArgs e)
         {
-            MeasurementConverter mc = new MeasurementConverter();
-            mc.Show();
-            mc.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("MeasurementConverter").Show();
         }
 
         private void Time_Click(object sender, EventArgs e)
         {
-            Time t = new Time();
-            t.Show();
-            t.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("Time").Show();
         }
 
+        private void ProgrammerView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Action for the Backspace Button
+        private void btnBackSpace_Click(object sender, EventArgs e)
+        {
+            // If the label is set to default
+            if (lblInput.Text.Equals("0"))
+            {
+                return;
+            }
+            else
+            {
+                // If not at default it removes the last digit
+                string removeTemp = lblInput.Text.Remove(lblInput.Text.Length - 1, 1);
+                lblInput.Text = removeTemp;
+                // when the string array is empty sets back to default
+                if (lblInput.Text.Equals(""))
+                {
+                    lblInput.Text = "0";
+                }
+            }
+        }
     }   
 }
 

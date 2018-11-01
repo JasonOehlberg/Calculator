@@ -1,8 +1,7 @@
 ﻿/*
- Jason Oehlberg
- CS.4253 Windows Programming
- Homework 2: Conversion Calculator
- Due: 2018.09.25
+ Author: Jason Oehlberg
+ Program: Calculator
+ Date: 2018.10.31
  */
 
 using System;
@@ -12,7 +11,6 @@ namespace Calculator
 {
     static class Program
     {
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,8 +20,10 @@ namespace Calculator
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            StandardCalculator st = new StandardCalculator();
-            Application.Run(st);
+            
+            Application.Run(AppControl.GetForm("StandardCalculator"));
         }
+
+
     }
 }

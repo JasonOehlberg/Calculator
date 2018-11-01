@@ -1,5 +1,8 @@
-﻿// Author: Jason Oehlberg
-
+﻿/*
+ Author: Jason Oehlberg
+ Program: Calculator
+ Date: 2018.10.31
+ */
 
 using System;
 using System.Collections;
@@ -24,6 +27,7 @@ namespace Calculator
             addRadMeasureTypeListeners(getMeasurementRadBtn());
             // Initialize Conversion RadioButton Listeners
             addRadConvertListeners(getConvertToRadBtn());
+            this.KeyPreview = true;
         }
 
         private void MeasurementConverter_Load(object sender, EventArgs e)
@@ -108,6 +112,7 @@ namespace Calculator
             lblDataLarge.Text = "";
             lblDataMiddle.Text = "";
             lblDataSmall.Text = "";
+            mc.DecimalPressed = false;
         }
 
         // Actions for the BackSpace Button
@@ -281,9 +286,12 @@ namespace Calculator
                                 }
                             }
                             // Each result Label is populated with the base converted value divided by the conversion of the opposite UnitType -- switchUnitType() or not for base unit
-                            lblDataSmall.Text = (Convert.ToDouble(convertedValue) / switchUnitType(rbConvert.Text, rb.Text)[0].Conversion).ToString() + " " + switchUnitType(rbConvert.Text, rb.Text)[0].Name;
-                            lblDataMiddle.Text = convertedValue + " " + switchUnitType(rbConvert.Text, rb.Text)[1].Name;
-                            lblDataLarge.Text = (Convert.ToDouble(convertedValue) / switchUnitType(rbConvert.Text, rb.Text)[2].Conversion).ToString() + " " + switchUnitType(rbConvert.Text, rb.Text)[2].Name;
+                            lblDataSmall.Text = (Convert.ToDouble(convertedValue) / switchUnitType(rbConvert.Text, rb.Text)[0].Conversion).ToString();
+                            lblUnitTypeSmall.Text = switchUnitType(rbConvert.Text, rb.Text)[0].Name;
+                            lblDataMiddle.Text = convertedValue;
+                            lblUnitTypeMiddle.Text = switchUnitType(rbConvert.Text, rb.Text)[1].Name;
+                            lblDataLarge.Text = (Convert.ToDouble(convertedValue) / switchUnitType(rbConvert.Text, rb.Text)[2].Conversion).ToString();
+                            lblUnitTypeLarge.Text = switchUnitType(rbConvert.Text, rb.Text)[2].Name;
                         }
 
                     }
@@ -299,35 +307,26 @@ namespace Calculator
         // All below open a new form and close the current one when clicked
         private void Calculator_Click(object sender, EventArgs e)
         {
-            StandardCalculator sc = new StandardCalculator();
-            sc.Show();
-            sc.Location = Location;
-            Close();
-        }
-
-        private void Measurement_Click(object sender, EventArgs e)
-        {
-            MeasurementConverter mc = new MeasurementConverter();
-            mc.Show();
-            mc.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("StandardCalculator").Show();
         }
 
         private void Time_Click(object sender, EventArgs e)
         {
-            Time t = new Time();
-            t.Show();
-            t.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("Time").Show();
         }
 
         private void Programmer_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Show();
-            f.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("ProgrammerView").Show();
         }
 
+        private void MeasurementConverter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

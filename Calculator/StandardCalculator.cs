@@ -1,5 +1,12 @@
-﻿using System;
+﻿/*
+ Author: Jason Oehlberg
+ Program: Calculator
+ Date: 2018.10.31
+ */
+
+using System;
 using System.Windows.Forms;
+
 
 namespace Calculator
 {
@@ -22,7 +29,6 @@ namespace Calculator
             // Total property set to zero -- so the equation will not evaluate for the first time
             calc.Total = 0;
             calc.Operator = "";
-            
         }
 
         private void StandardCalculator_Load(object sender, EventArgs e)
@@ -206,38 +212,34 @@ namespace Calculator
                 {
                     lblInput.Text = "0";
                 }
-            }
-            
+            }  
         }
-
-        // Action for the programmer Menu Item
 
         private void measurementConverterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MeasurementConverter mc = new MeasurementConverter();
-            mc.Owner = this;
-            mc.Show();
-            mc.Location = Location;
             Hide();
+            AppControl.GetForm("MeasurementConverter").Show();
         }
 
         private void timeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Time t = new Time();
-            t.Owner = this;
-            t.Show();
-            t.Location = Location;
             Hide();
+            AppControl.GetForm("Time").Show();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void Programmer_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Owner = this;
-            f.Show();
-            f.Location = Location;
             Hide();
-
+            AppControl.GetForm("ProgrammerView").Show();
         }
+
+        private void StandardCalculator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Action for the programmer Menu Item
+
+
     }
 }

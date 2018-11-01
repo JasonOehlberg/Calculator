@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ Author: Jason Oehlberg
+ Program: Calculator
+ Date: 2018.10.31
+ */
+
+using System;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class Calculation : Operation 
+    class Calculation : ProgrammerControl 
     {
         public Double Total { get; set; }
         public String Operator { get; set; }
@@ -38,7 +40,7 @@ namespace Calculator
                 total = (Convert.ToDouble(temp[0]) / Convert.ToDouble(temp[2])).ToString();
             }
                 
-            else if (temp[1].Equals("×"))
+            else if (temp[1].Equals("x"))
                 total = (Convert.ToDouble(temp[0]) * Convert.ToDouble(temp[2])).ToString();
             Debug.WriteLine(total);
             return total;

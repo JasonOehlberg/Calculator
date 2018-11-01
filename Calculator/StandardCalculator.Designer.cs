@@ -54,13 +54,13 @@
             this.menuItemCalculator = new System.Windows.Forms.ToolStripMenuItem();
             this.measurementConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Programmer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBackSpace
             // 
-            this.btnBackSpace.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnBackSpace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnBackSpace.Font = new System.Drawing.Font("Arial Unicode MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackSpace.Location = new System.Drawing.Point(205, 176);
             this.btnBackSpace.Name = "btnBackSpace";
@@ -72,7 +72,7 @@
             // 
             // btn1
             // 
-            this.btn1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn1.Location = new System.Drawing.Point(13, 374);
@@ -85,7 +85,7 @@
             // 
             // btn2
             // 
-            this.btn2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.Location = new System.Drawing.Point(109, 374);
             this.btn2.Name = "btn2";
@@ -96,7 +96,7 @@
             // 
             // btn3
             // 
-            this.btn3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.Location = new System.Drawing.Point(205, 375);
             this.btn3.Name = "btn3";
@@ -107,7 +107,7 @@
             // 
             // btn4
             // 
-            this.btn4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn4.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.Location = new System.Drawing.Point(13, 308);
             this.btn4.Name = "btn4";
@@ -118,7 +118,7 @@
             // 
             // btn5
             // 
-            this.btn5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn5.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.Location = new System.Drawing.Point(109, 308);
             this.btn5.Name = "btn5";
@@ -129,7 +129,7 @@
             // 
             // btn6
             // 
-            this.btn6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn6.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.Location = new System.Drawing.Point(205, 309);
             this.btn6.Name = "btn6";
@@ -140,7 +140,7 @@
             // 
             // btn7
             // 
-            this.btn7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn7.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.Location = new System.Drawing.Point(13, 242);
             this.btn7.Name = "btn7";
@@ -151,7 +151,7 @@
             // 
             // btn8
             // 
-            this.btn8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn8.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.Location = new System.Drawing.Point(109, 242);
             this.btn8.Name = "btn8";
@@ -162,7 +162,7 @@
             // 
             // btn9
             // 
-            this.btn9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn9.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.Location = new System.Drawing.Point(205, 243);
             this.btn9.Name = "btn9";
@@ -173,7 +173,7 @@
             // 
             // btn0
             // 
-            this.btn0.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btn0.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.Location = new System.Drawing.Point(109, 440);
             this.btn0.Name = "btn0";
@@ -184,7 +184,7 @@
             // 
             // btnCE
             // 
-            this.btnCE.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnCE.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCE.Location = new System.Drawing.Point(13, 176);
             this.btnCE.Name = "btnCE";
@@ -196,7 +196,7 @@
             // 
             // btnEquals
             // 
-            this.btnEquals.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnEquals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnEquals.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.Location = new System.Drawing.Point(301, 441);
             this.btnEquals.Name = "btnEquals";
@@ -207,7 +207,7 @@
             // 
             // btnDivide
             // 
-            this.btnDivide.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnDivide.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivide.Location = new System.Drawing.Point(301, 177);
             this.btnDivide.Name = "btnDivide";
@@ -218,7 +218,7 @@
             // 
             // btnMultiply
             // 
-            this.btnMultiply.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnMultiply.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.Location = new System.Drawing.Point(301, 243);
             this.btnMultiply.Name = "btnMultiply";
@@ -229,7 +229,7 @@
             // 
             // btnSubtract
             // 
-            this.btnSubtract.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnSubtract.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtract.Location = new System.Drawing.Point(301, 309);
             this.btnSubtract.Name = "btnSubtract";
@@ -240,7 +240,7 @@
             // 
             // btnPlus
             // 
-            this.btnPlus.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnPlus.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.Location = new System.Drawing.Point(301, 375);
             this.btnPlus.Name = "btnPlus";
@@ -251,7 +251,7 @@
             // 
             // btnDecimal
             // 
-            this.btnDecimal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDecimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnDecimal.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimal.Location = new System.Drawing.Point(205, 441);
             this.btnDecimal.Name = "btnDecimal";
@@ -263,7 +263,7 @@
             // 
             // btnPosNeg
             // 
-            this.btnPosNeg.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnPosNeg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnPosNeg.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPosNeg.Location = new System.Drawing.Point(13, 440);
             this.btnPosNeg.Name = "btnPosNeg";
@@ -275,7 +275,7 @@
             // 
             // btnC
             // 
-            this.btnC.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.btnC.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.Location = new System.Drawing.Point(109, 176);
             this.btnC.Name = "btnC";
@@ -312,13 +312,12 @@
             this.menuItemCalculator,
             this.measurementConverterToolStripMenuItem,
             this.timeToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.Programmer});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(406, 28);
             this.menuStrip1.TabIndex = 54;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.UseWaitCursor = true;
             // 
             // menuItemCalculator
             // 
@@ -343,17 +342,18 @@
             this.timeToolStripMenuItem.Text = "&Time";
             this.timeToolStripMenuItem.Click += new System.EventHandler(this.timeToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // Programmer
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(104, 24);
-            this.toolStripMenuItem1.Text = "Programmer";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.Programmer.Name = "Programmer";
+            this.Programmer.Size = new System.Drawing.Size(104, 24);
+            this.Programmer.Text = "Programmer";
+            this.Programmer.Click += new System.EventHandler(this.Programmer_Click);
             // 
             // StandardCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(192)))), ((int)(((byte)(194)))));
             this.ClientSize = new System.Drawing.Size(406, 520);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblEquation);
@@ -381,6 +381,7 @@
             this.MinimumSize = new System.Drawing.Size(424, 567);
             this.Name = "StandardCalculator";
             this.Text = "StandardCalculator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StandardCalculator_FormClosed);
             this.Load += new System.EventHandler(this.StandardCalculator_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -416,6 +417,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuItemCalculator;
         private System.Windows.Forms.ToolStripMenuItem measurementConverterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem Programmer;
     }
 }

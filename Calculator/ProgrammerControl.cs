@@ -1,8 +1,7 @@
 ﻿/*
- Jason Oehlberg
- CS.4253 Windows Programming
- Homework 2: Conversion Calculator
- Due: 2018.09.25
+ Author: Jason Oehlberg
+ Program: Calculator
+ Date: 2018.10.31
  */
 
 using System;
@@ -12,7 +11,7 @@ using System.Linq;
 namespace Calculator
 {
 
-    class Operation
+    class ProgrammerControl
     {
 
         // string conversion to unsigned long

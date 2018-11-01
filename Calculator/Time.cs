@@ -1,4 +1,8 @@
-﻿// Author: Jason Oehlberg
+﻿/*
+ Author: Jason Oehlberg
+ Program: Calculator
+ Date: 2018.10.31
+ */
 
 using System;
 using System.Collections.Generic;
@@ -58,26 +62,20 @@ namespace Calculator
 
         private void programmerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Show();
-            f.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("ProgrammerView").Show();
         }
 
         private void measurementConverterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MeasurementConverter mc = new MeasurementConverter();
-            mc.Show();
-            mc.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("MeasurementConverter").Show();
         }
 
         private void Calculator_Click(object sender, EventArgs e)
         {
-            StandardCalculator sc = new StandardCalculator();
-            sc.Show();
-            sc.Location = Location;
-            Close();
+            Hide();
+            AppControl.GetForm("StandardCalculator");
         }
 
        
